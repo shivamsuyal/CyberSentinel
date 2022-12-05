@@ -121,8 +121,6 @@ nav #nTops #mhSVG {
   background-color: transparent;
   border-radius: 1rem;
   opacity: 1;
-  -webkit-transition: all 1000ms;
-  transition: all 1000ms;
   z-index: 3;
   cursor: pointer;
 }
@@ -265,7 +263,6 @@ nav #mhLinks1 #mhLinks2 a span {
 
 #page1 {
   width: 100%;
-  margin-top: 3rem;
   height: calc(90vh - 3rem);
   min-height: -webkit-fill-available;
   display: -webkit-box;
@@ -322,6 +319,7 @@ nav #mhLinks1 #mhLinks2 a span {
   height: 20rem;
   width: auto;
   overflow: visible;
+  position: relative;
 }
 #page1 #svgContainer #Csvg1 #shieldSVG1 {
   -webkit-transform-origin: center center !important;
@@ -391,15 +389,33 @@ nav #mhLinks1 #mhLinks2 a span {
 #page3 {
   height: 100vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 2.5rem;
+}
+#page3 .title {
+  margin: 0;
+  padding: 0;
+}
+#page3 #splideWapper {
+  width: 100vw;
 }
 #page3 .splide .splide__track {
   overflow: visible;
-  margin-top: 50vh;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
-#page3 .splide .splide__arrow, #page3 .splide .splide__pagination {
-  top: 0 !important;
+#page3 .splide .splide__pagination {
+  bottom: -1.5rem !important;
 }
 #page3 .boundry {
   position: relative;

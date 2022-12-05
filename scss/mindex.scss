@@ -114,7 +114,7 @@ nav{
             background-color: transparent;
             border-radius: 1rem;
             opacity: 1;
-            transition: all 1000ms;
+            // transition: all 1000ms;
             z-index: 3;
             cursor: pointer;
             &[data-open=false]{
@@ -234,10 +234,10 @@ nav{
 
 #page1{
     width: 100%;
-    margin-top: $svg-height;
+    // margin-top: $svg-height;
     height: calc(90vh - $svg-height) ;
     min-height: -webkit-fill-available;
-    // background-color: #3FFF00;
+    // background-color:burlywood;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -272,7 +272,10 @@ nav{
             height: 20rem;
             width: auto;
             overflow: visible;
+            position: relative;
             #shieldSVG1{
+                // position: absolute;
+                // top: 10rem;
                 transform-origin: center center !important;
                 opacity: 0;
                 image{
@@ -309,7 +312,7 @@ nav{
     height: 100vh;
     width: 100vw;
     display: flex;
-    // background-color: #3FFF00;
+    // background-color:cadetblue;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -355,7 +358,20 @@ nav{
     $per1 : 1000px;
     height: 100vh;
     width: 100%;
+    // background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.5rem;
 
+    .title{
+        margin: 0;
+        padding: 0;
+    }
+    #splideWapper{
+        width: 100vw;
+    }
     // position: relative;
     // display: flex;
     // justify-content: center;
@@ -365,15 +381,16 @@ nav{
         // height: 100%;
         .splide__track{
             overflow: visible;
-            margin-top: 50vh;
-            transform: translateY(-50%);
+            // margin-top: 50vh;
+            // transform: translateY(50%);
             // z-index: -10;
             // position: absolute;
         }
-        .splide__arrow,.splide__pagination{
-            top: 0 !important;
-            // transform: translateY(-50%);
-            // z-index: 100;
+        // .splide__arrow{
+        //     top: 0 !important;
+        // }
+        .splide__pagination{
+            bottom: -1.5rem !important
         }
     }
     .boundry{

@@ -8,40 +8,15 @@ particlesJS.load('particles-js', './jsons/particle.json', function() {
 gsap.registerPlugin(ScrollTrigger)
 gsap.config({trialWarn: false})
 
-// const nav = document.querySelector("nav")
-
-/** Calculation of Canvas animation width *
-const canvas = document.getElementById('navCanvas')
-const ctx = canvas.getContext('2d')
-let navFill = {
-    r : 0,
-    i : 1,
-    n : 25,
-    ani : true
-}
-ctx.lineWidth = 50
-ctx.lineJoin = "round";
-var a = canvas.width 
-var b = canvas.height - 40 
-var c = Math.sqrt((a*a)+(b*b)) 
-
-/** Calculation of Canvas animation width */
-
-
-// var mhLinks = document.getElementById("mhLinks")
-// var mhLinksA = document.querySelectorAll("#mhLinks a")
-// var blurBG = document.getElementById("blurBG")
 var mhSVG = document.getElementById("mhSVG")
 const nav = document.querySelector("nav")
 
 
 const navTime = gsap.timeline({
     onComplete : ()=>{
-        // document.body.style.overflow = "hidden"
         mhLinks1.style.pointerEvents = "all"  
     },
     onReverseComplete : ()=>{
-        // document.body.style.overflow = "visible"
         mhLinks1.style.pointerEvents = "none"  
     }
 })
@@ -63,31 +38,6 @@ mhSVG.onclick = ()=>{
 } 
 
 
-
-// function drawShape(){
-//     if(navFill.ani){
-//         r = navFill.r
-//         i = navFill.i
-//         n = navFill.n
-//         ctx.clearRect(0, 0, canvas.width, canvas.height);
-//         ctx.beginPath()
-//         ctx.save()
-//         ctx.translate(canvas.width,0)
-//         ctx.moveTo(0,0-r)
-//         for (var j = 0; j < n; j++) {
-//             ctx.rotate(Math.PI/n)
-//             ctx.lineTo(0,0-(r*i))
-//             ctx.rotate(Math.PI/n)
-//             ctx.lineTo(0,0-r)
-//         }
-//         ctx.restore()
-//         ctx.closePath()
-//         ctx.stroke()
-//         ctx.fill()
-//     }
-// }
-
-// gsap.ticker.add(drawShape)
 
 
 gsap.timeline()
@@ -114,7 +64,6 @@ gsap.timeline()
             return t.getTotalLength()
         }
     },{
-        // delay : 0.3,
         duration : 2,
         strokeDashoffset : 0,
         ease : Power2.easeInOut
@@ -130,16 +79,12 @@ gsap.timeline({
         end : "top center",
         start : "center center",
         // markers : true,
-        // scroller : "#people",
         scrub : true,
-        // pin : true,
-        // pinSpacing: false,
-        // pinType : 'fixed',
         toggleActions : "restart pause reverse pause",
     }
     })
     .to("#shieldSVG1",{
-        y : shieldDiv.offsetTop + shieldSVG1.getBoundingClientRect().height * 2,
+        y : 200 + shieldDiv.offsetTop + shieldSVG1.getBoundingClientRect().height * 2,
         scale : 1.2,
         duration : 10,
     })
@@ -151,27 +96,18 @@ gsap.timeline({
 gsap.timeline({
     scrollTrigger : {
         trigger : ".title1",
-        // scroller  : "#pages",
         start : "+=25% center",
         // markers : true,
         scrub : true,
         pin : "#page4",
         pinType : 'fixed',
         toggleActions : "restart pause reverse pause",
-        // onEnterBack : updateAboutImg,
     }
 })
-    // .add(writeIt)
     .from(".title1",{y : "50vh",duration : 10})
     .from(".title1 h1",{fontSize : "8rem",duration : 10},"<")
-    // .to("#hashTags",{opacity : 0,duration : 2})
     .to("#gyan p",{opacity : 1,duration : 1},"5")
     .to(".hid1",{opacity : 1,duration : 3,stagger: 1},"<1")
-    // .to("#page4 .title1 h1",{fontSize : "2rem",duration : 2,delay : "3.6"})
-    // .to("#page4 .title1 tt",{fontSize : "1rem",duration : 0.5},"<0.5")
-    // .to("#hashTags",{opacity : 0,duration : 0.5})
-    // .to("#page4 .title1",{flexBasis : "0",duration : 2})
-    // .to("#page4",{,duration : 1})
 
 
 
