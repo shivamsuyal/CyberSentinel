@@ -1,0 +1,17 @@
+{
+    "name": "none/site",
+    "autoload": {
+        "psr-4": {
+            "None\\Site\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shivamsuyal",
+            "email": "shivamsuyal25@gmail.com"
+        }
+    ],
+    "require": {
+        "mobiledetect/mobiledetectlib": "^3.74"
+    }
+}

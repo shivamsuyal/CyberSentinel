@@ -1,0 +1,39 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #101010;
+}
+
+svg {
+  height: 20rem;
+  width: auto;
+  border: 1px solid green;
+  overflow: visible;
+}
+svg #shieldSVG1 {
+  opacity: 0;
+  z-index: 10;
+}
+svg #shieldSVG1 image {
+  opacity: 0;
+}
+svg #sen {
+  opacity: 0;
+  z-index: 20;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+svg #all {
+  opacity: 1;
+}
+svg #all path {
+  fill: none;
+}

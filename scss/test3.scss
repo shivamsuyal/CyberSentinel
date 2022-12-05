@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #101010;
+}
+svg{
+    height: 20rem;
+    width: auto;
+    border: 1px solid green;
+    overflow: visible;
+    #shieldSVG1{
+        opacity: 0;
+        z-index: 10;
+        image{
+            opacity: 0;
+        }
+    }
+    #sen{
+        opacity: 0;
+        z-index: 20;
+        backface-visibility: hidden;
+    }
+    #all{
+        opacity: 1;
+        path{
+            fill: none;
+        }
+    }
+    
+
+}
